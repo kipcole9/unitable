@@ -21,6 +21,11 @@ module Unit
       @normalization_factor
     end
     
+    def self.available_units
+      my_child_classes = subclasses
+      my_child_classes.map{|c| c.name.split('::').last.underscore.singularize}
+    end
+    
     def initialize(arg)
       if arg.is_a? Hash
         @normalized_value = arg[:normalized]
