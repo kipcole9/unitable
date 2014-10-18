@@ -4,3 +4,7 @@ module Unit
 
   end
 end
+Unit::Km = Unit::Kilometer
+Unit::KM = Unit::Kilometer
+Unit::Kilometre = Unit::Kilometer
+

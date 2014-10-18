@@ -101,6 +101,17 @@ module Unit
       "#{value.localize.to_s} #{I18n.t(key, count: self.value)}"
     end
     
+    def can_convert_to
+      my_superclass = self.class.superclass
+      my_sibling_classes = my_superclass.subclasses - [self.class]
+      my_sibling_classes.map{|c| c.name.split('::').last.underscore.singularize}
+    end
+    
+    def can_convert_to?(other)
+      can_convert_to.include? other.to_s
+    end
+
+    
     def method_missing(method, args = nil, &block)
       if m = method.to_s.match(/to_(.*)/)
         convert(m[1])
@@ -111,17 +122,17 @@ module Unit
     
   protected
     def convert(other_unit)
-      my_superclass = self.class.superclass
       other_unit = other_unit.singularize
-      my_sibling_classes = my_superclass.subclasses - [self.class]
-      sibling_units = my_sibling_classes.map{|c| c.name.split('::').last.downcase.singularize}
-      if sibling_units.include? other_unit
+      if can_convert_to.include? other_unit
         module_name = self.class.name.split('::')[0]
-        "#{module_name}::#{other_unit.capitalize}".constantize.new(normalized: self.normalized_value)
+        "#{module_name}::#{other_unit.camelize}".constantize.new(normalized: self.normalized_value)
       else
-        unit_name = self.class.name.split('::')[1]
         raise ConversionError, "Can't convert #{unit_name.downcase} to #{other_unit}"
       end
+    end
+    
+    def unit_name
+      self.class.name.split('::')[1].underscore
     end
     
     def normalize_value

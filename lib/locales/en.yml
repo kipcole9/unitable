@@ -7,6 +7,20 @@ en:
             short:
                 one:    m
                 other:  m
+        kilometer:
+            long:
+                one:    kilometer
+                other:  kilometers
+            short:
+                one:    km
+                other:  km
+        millimeter:
+            long:
+                one:    millimeter
+                other:  millimeters
+            short:
+                one:    mm
+                other:  mm               
         foot:
             long:
                 one:    foot
@@ -14,5 +28,143 @@ en:
             short:
                 one:    ft
                 other:  ft
-            
-    
+        yard:
+            long:
+                one:    yard
+                other:  yards
+            short:
+                one:    yd
+                other:  yd
+        inch:
+            long:
+                one:    inch
+                other:  inches
+            short:
+                one:    '"'
+                other:  '"'
+        furlong:
+            long:
+                one:    furlong
+                other:  furlongs
+            short:
+                one:    fl
+                other:  fl
+        mile:
+            long:
+                one:    miles
+                other:  mile
+            short:
+                one:    m
+                other:  m 
+        lightyear:
+            long:
+                one:    lightyear
+                other:  lightyears
+            short:
+                one:    ly
+                other:  ly
+        fathom:
+            long:
+                one:    fathom
+                other:  fathoms
+            short:
+                one:    ftm
+                other:  ftm
+        rod:
+            long:
+                one:    rod
+                other:  rods
+            short:
+                one:    rd
+                other:  rd
+        pole:
+            long:
+                one:    pole
+                other:  poles
+            short:
+                one:    p
+                other:  p
+        perch:
+            long:
+                one:    perch
+                other:  perches
+            short:
+                one:    p
+                other:  p
+        nauticalmile:
+            long:
+                one:    nautical mile
+                other:  nautical miles
+            short:
+                one:    nm
+                other:  nm
+        shackle:
+            long:
+                one:    shackle
+                other:  shackles
+            short:
+                one:    sh
+                other:  sh
+        chain:
+            long:
+                one:    chain
+                other:  chains
+            short:
+                one:    ch
+                other:  ch
+        league:
+            long:
+                one:    league
+                other:  leagues
+            short:
+                one:    lg
+                other:  lg   
+        cubit:
+            long:
+                one:    cubit
+                other:  cubits
+            short:
+                one:    cu
+                other:  cu
+        pica:
+            long:
+                one:    pica
+                other:  picas
+            short:
+                one:    pi
+                other:  pi
+        micron:
+            long:
+                one:    micron
+                other:  microns
+            short:
+                one:    mi
+                other:  mi
+        cricketpitch:
+            long:
+                one:    cricket pitch
+                other:  cricket pitches
+            short:
+                one:    pitch
+                other:  pitches
+        bowlinglane:
+            long:
+                one:    bowling lane
+                other:  bowling lanes
+            short:
+                one:    lane
+                other:  lanes
+        londonbus:
+            long:
+                one:    london bus
+                other:  london buses
+            short:
+                one:    bus
+                other:  buses
+        base_distance:
+            long:
+                one:    base distance
+                other:  base distances
+            short:
+                one:    base
+                other:  bases

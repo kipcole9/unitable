@@ -4,3 +4,4 @@ module Unit
 
   end
 end
+Unit::Metre = Unit::Meter
