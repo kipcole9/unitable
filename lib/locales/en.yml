@@ -1,0 +1,18 @@
+en:
+    unit:
+        meter:
+            long:
+                one:    meter
+                other:  meters
+            short:
+                one:    m
+                other:  m
+        foot:
+            long:
+                one:    foot
+                other:  feet
+            short:
+                one:    ft
+                other:  ft
+            
+    
