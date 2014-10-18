@@ -116,7 +116,6 @@ module Unit
       can_convert_to.include? other.to_s
     end
 
-    
     def method_missing(method, args = nil, &block)
       if m = method.to_s.match(/to_(.*)/)
         convert(m[1])
@@ -126,13 +125,14 @@ module Unit
     end
     
   protected
+  
     def convert(other_unit)
       other_unit = other_unit.singularize
       if can_convert_to.include? other_unit
         module_name = self.class.name.split('::')[0]
         "#{module_name}::#{other_unit.camelize}".constantize.new(normalized: self.normalized_value)
       else
-        raise ConversionError, "Can't convert #{unit_name.downcase} to #{other_unit}"
+        raise ConversionError, "Can't convert #{unit_name.underscore} to #{other_unit}"
       end
     end
     
@@ -147,9 +147,6 @@ module Unit
     def denormalize_value
       @normalized_value / self.class.normalization_factor
     end
-    
-    
+
   end
-  
-  
 end
