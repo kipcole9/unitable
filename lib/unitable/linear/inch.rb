@@ -1,6 +1,6 @@
 module Unit
   class Inch < Linear
-      @normalization_factor = 25.4
+    @normalization_factor = 25.4
 
     def to_s(format = :short)
       name = self.class.name.split('::').last.downcase

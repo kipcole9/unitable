@@ -1,6 +1,6 @@
 module Unit
   class Kilometer < Linear
-    @normalization_factor = 1_000_000
+    @normalization_factor = 1_000_000.0
 
   end
 end

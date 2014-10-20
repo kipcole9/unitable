@@ -5,7 +5,7 @@ describe Unitable do
     expect(Unitable::VERSION).not_to be nil
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  it 'knows 1 km in miles' do
+    expect(Unit::Kilometer[1]).to eq(Unit::Mile[0.621371192237334])
   end
 end

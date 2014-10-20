@@ -6,6 +6,9 @@ module Unit
   
   # Public API of a Unit
   class Unit < Numeric
+    # Rounding precision for comparing two units
+    EQUALITY_PRECISION = 5
+    
     @normalization_factor = nil
     
     attr_accessor   :value
@@ -89,7 +92,7 @@ module Unit
     
     def ==(other)
       if other.class.superclass == self.class.superclass
-        self.normalized_value == other.normalized_value
+        self.normalized_value.round(EQUALITY_PRECISION) == other.normalized_value.round(EQUALITY_PRECISION)
       else
         self.value == other
       end

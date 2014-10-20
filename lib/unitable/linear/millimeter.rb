@@ -1,6 +1,6 @@
 module Unit
   class Millimeter < Linear
-    @normalization_factor = 1
+    @normalization_factor = 1.0
 
   end
 end
