@@ -17,6 +17,7 @@ module Unitable
           unit = klass.name.split('::').last.underscore
           [Float, Fixnum].each do |n|
             n.send :define_method, unit, -> {klass[self]}
+            n.send :define_method, unit.pluralize, -> {klass[self]}
           end
         end
       end

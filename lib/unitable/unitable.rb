@@ -124,8 +124,8 @@ module Unit
     end
 
     def method_missing(method, args = nil, &block)
-      if m = method.to_s.match(/to_(.*)/)
-        convert(m[1])
+      if m = method.to_s.match(/(to|in)_(.*)/)
+        convert(m[2])
       else
         super
       end
