@@ -14,7 +14,7 @@ module Unit
     attr_accessor   :value
     attr_reader     :normalized_value
     
-    delegate :to_i, :to_f, :to_d, to: :value
+    delegate :to_i, :to_f, :to_d, :ceil, :floor, :round, :abs, to: :value
     
     def self.[](arg)
       new(arg)
@@ -25,8 +25,11 @@ module Unit
     end
     
     def self.available_units
-      my_child_classes = subclasses
-      my_child_classes.map{|c| c.name.split('::').last.underscore.singularize}
+      subclasses
+    end
+    
+    def self.available_unit_types
+      available_units.map{|c| c.name.split('::').last.underscore.singularize}
     end
     
     def initialize(arg)
@@ -113,8 +116,12 @@ module Unit
       @value
     end
     
+    def self.can_convert_to
+      subclasses.map{|c| c.name.split('::').last.underscore.singularize}
+    end
+    
     def can_convert_to
-      my_superclass = self.class.superclass
+      my_superclass = self.class.superclass 
       my_sibling_classes = my_superclass.subclasses - [self.class]
       my_sibling_classes.map{|c| c.name.split('::').last.underscore.singularize}
     end
