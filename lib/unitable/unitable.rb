@@ -109,6 +109,10 @@ module Unit
       "#{value.localize.to_s} #{I18n.t(key, count: self.value)}"
     end
     
+    def inspect
+      @value
+    end
+    
     def can_convert_to
       my_superclass = self.class.superclass
       my_sibling_classes = my_superclass.subclasses - [self.class]
