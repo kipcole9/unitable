@@ -52,7 +52,7 @@ x.can_convert_to
 x.can_convert_to? :london_bus
  => true
 ```
-You can also convert or create a new unit by passing a hash with a normalised value to the Unit instance initialiser.  To display how many millimeters in a chain:
+You can also convert or create a new unit instance by passing a hash with a normalised value to the Unit instance initialiser.  To display how many millimeters in a chain:
 
 ```ruby
 Unit::Millimeter[Unit::Chain[1]]
