@@ -125,6 +125,7 @@ module Unit
       my_sibling_classes = my_superclass.subclasses - [self.class]
       my_sibling_classes.map{|c| c.name.split('::').last.underscore.singularize}
     end
+    alias :available_units :can_convert_to
     
     def can_convert_to?(other)
       can_convert_to.include? other.to_s
