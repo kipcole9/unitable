@@ -1,7 +1,11 @@
 # http://gwydir.demon.co.uk/jo/units/area.htm
 module Unit
   class Area < Unit
-    # @normalization_factor is in square millimeters
+    @base_unit = :square_millimeters
+    
+    def self.in_square_millimeters
+      normalization_factor
+    end
   end
   
 end

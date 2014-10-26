@@ -10,9 +10,10 @@ module Unit
     EQUALITY_PRECISION = 5
     
     @normalization_factor = nil
+    @base_unit = nil
     
     attr_accessor   :value
-    attr_reader     :normalized_value
+    attr_reader     :normalized_value, :base_unit
     
     delegate :to_i, :to_f, :to_d, :ceil, :floor, :round, :abs, to: :value
     

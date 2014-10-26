@@ -1,7 +1,11 @@
 # http://gwydir.demon.co.uk/jo/units/length.htm
 module Unit
   class Linear < Unit
-    # @normalization_factor is in millimeters
+    @base_unit = :millimeter
+    
+    def self.in_millimeters
+      normalization_factor
+    end
   end
   
 end

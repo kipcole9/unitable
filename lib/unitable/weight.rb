@@ -1,7 +1,11 @@
 # http://gwydir.demon.co.uk/jo/units/weight.htm
 module Unit
   class Weight < Unit
-    # @normalization_factor is in grams
+    @base_unit = :grams
+    
+    def self.in_grams
+      normalization_factor
+    end
   end
   
 end
