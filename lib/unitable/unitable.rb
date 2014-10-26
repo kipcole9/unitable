@@ -21,6 +21,10 @@ module Unit
       new(arg)
     end
     
+    def self.definition
+      I18n.t("unit.#{self.unit_name}.definition", default: 'Undefined').gsub("\n",'')
+    end
+    
     def self.normalization_factor
       @normalization_factor
     end
@@ -152,8 +156,12 @@ module Unit
       end
     end
     
+    def self.unit_name
+      name.split('::')[1].underscore
+    end
+    
     def unit_name
-      self.class.name.split('::')[1].underscore
+      self.class.unit_name
     end
     
     def normalize_value

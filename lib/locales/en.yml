@@ -7,6 +7,14 @@ en:
             short:
                 one:    m
                 other:  m
+            definition: |
+                The fundamental unit of length in the metric system, 
+                equal to 100 centimetres or approximately 39.37 inches. Originally 
+                intended to be one ten-millionth of the distance from the Earth's 
+                equator to the North Pole (at sea level), its definition has 
+                been periodically refined to reflect growing knowledge of metrology. 
+                Since 1983, it has been defined as "the length of the path travelled 
+                by light in vacuum during a time interval of 1/299,792,458 of a second
         kilometer:
             long:
                 one:    kilometer
@@ -49,6 +57,8 @@ en:
             short:
                 one:    fl
                 other:  fl
+            definition: |
+                An eighth of a mile or 220 yards.
         mile:
             long:
                 one:    miles
@@ -56,6 +66,8 @@ en:
             short:
                 one:    m
                 other:  m 
+            definition: |
+                A unit of linear measure equal to 1,760 yards (approximately 1.609 kilometres).
         lightyear:
             long:
                 one:    lightyear
@@ -63,6 +75,9 @@ en:
             short:
                 one:    ly
                 other:  ly
+            definition: |
+                A unit of astronomical distance equivalent to the distance that light travels in 
+                one year, which is 9.4607 × 1012 km (nearly 6 million million miles).
         fathom:
             long:
                 one:    fathom
@@ -168,3 +183,14 @@ en:
             short:
                 one:    base
                 other:  bases
+        parsec:
+            long:
+                one:    parsec
+                other:  parsecs
+            short:
+                one:    parsec
+                other:  parsecs
+            definition: |
+                A unit of distance used in astronomy, equal to about 3.26 light years (3.086 × 1013 kilometres). 
+                One parsec corresponds to the distance at which the mean radius of the earth's orbit subtends an 
+                angle of one second of arc.
