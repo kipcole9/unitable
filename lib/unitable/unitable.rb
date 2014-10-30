@@ -45,7 +45,7 @@ module Unit
         @normalized_value = arg.normalized_value
         @value = denormalize_value
       else
-        @value = arg
+        @value = arg.to_f
         @normalized_value = normalize_value
       end
     end
