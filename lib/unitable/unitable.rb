@@ -94,7 +94,7 @@ module Unit
       if other.class.superclass == self.class.superclass
         self.normalized_value <=> other.normalized_value
       else
-        self.value == other
+        self.value <=> other
       end
     end
     
